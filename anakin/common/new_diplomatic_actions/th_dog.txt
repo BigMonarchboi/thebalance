@@ -1,0 +1,32 @@
+th_become_dog = {
+	category = th_diplo_action
+
+	require_acceptance = yes
+
+	is_visible = {
+         		FROM = {
+			is_subject = no
+			ai = no
+		}
+    ai = no
+
+	}
+
+	is_allowed = { 
+       is_at_war = no
+    FROM = {
+   is_at_war = no
+   ai = no
+}
+
+	}
+
+	on_accept = {
+		create_subject = {
+			subject_type = th_actual_slave
+			subject = FROM
+		}
+
+	ai_will_do = {
+		always = no
+	}
